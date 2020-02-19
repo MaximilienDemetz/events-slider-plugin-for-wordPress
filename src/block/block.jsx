@@ -10,10 +10,10 @@ const { __ } = wp.i18n; // Import __() from wp.i18n
 const { registerBlockType } = wp.blocks; // Import registerBlockType() from wp.blocks
 const { Component } = wp.element;
 
-registerBlockType( 'cgb/block-weekly-events-display', {
+registerBlockType( 'cgb/block-events-slider', {
 	title: __( 'CCN-Events-Slider' ),
 	icon: 'calendar', 
-	category: 'common',  
+	category: 'common',
 	attributes: {
 		dailyEvents:{
 			type:'string',
@@ -23,7 +23,7 @@ registerBlockType( 'cgb/block-weekly-events-display', {
 		},
 	},
 	keywords: [
-		__( 'weekly-events-display — CGB Block' ),
+		__( 'events-slider — CGB Block' ),
 		__( 'calendar' ),
 	],
 	edit:  class EventsForm extends Component {

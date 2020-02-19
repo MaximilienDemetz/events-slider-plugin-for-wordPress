@@ -1,0 +1,154 @@
+/**
+ * #.# Common SCSS
+ *
+ * Can include things like variables and mixins
+ * that are used across the project.
+*/
+/**
+ * #.# Styles
+ *
+ * CSS for both Frontend+Backend.
+ */
+.wp-block-cgb-block-weekly-events-display {
+  color: #292929;
+  margin: 0 auto;
+  max-width: 80vw !important;
+  padding: 2rem; }
+
+.calendarContainer {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center; }
+
+.calendar {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  width: 80vw; }
+
+/*Ce qui concerne le header du calendrier */
+.calendarHeader {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  padding: 0;
+  color: white;
+  font-weight: bold; }
+
+.monthDisplay {
+  font-size: 2rem;
+  background-color: rgba(0, 0, 0, 0.63);
+  padding-left: 3.5rem;
+  height: 30px; }
+
+.monthDisplay:hover + .monthNav {
+  color: white; }
+
+.monthNav {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  color: rgba(0, 0, 0, 0.63);
+  background-color: rgba(0, 0, 0, 0.63);
+  height: 30px; }
+
+.monthNavBtn {
+  margin: 0; }
+
+.monthNav {
+  color: transparent; }
+
+.monthNav:hover p {
+  color: white; }
+
+.monthNav p:hover {
+  cursor: pointer; }
+
+.weekDisplay {
+  padding: 0;
+  color: rgba(0, 0, 0, 0.63); }
+
+.week-day {
+  padding-bottom: 0; }
+
+.daysOfWeek {
+  margin: 0; }
+
+.daysNb {
+  font-size: 4rem;
+  font-weight: bold;
+  text-align: left;
+  padding: 0px 10px; }
+
+table {
+  border: none !important;
+  border-color: transparent !important;
+  width: 100%; }
+
+tr, th {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  width: 100%; }
+
+th {
+  border: none !important; }
+
+td {
+  font-size: 0.8rem;
+  border: none !important;
+  font-weight: bold;
+  width: 100%;
+  padding-top: 0px !important; }
+
+li {
+  list-style: none;
+  margin: 0 !important;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-align: start;
+      align-items: flex-start;
+  -ms-flex-pack: start;
+      justify-content: flex-start; }
+
+.hidden {
+  display: none; }
+
+.weekNavBtn {
+  color: rgba(0, 0, 0, 0.63);
+  font-size: 5rem;
+  background-color: transparent !important;
+  padding: 0.2rem 1rem; }
+
+.weekNavBtn:hover {
+  color: rgba(0, 0, 0, 0.2);
+  background-color: grey;
+  text-decoration: none; }
+
+.hourSpan {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: start;
+  margin-right: 5px;
+  margin-top: 3px; }

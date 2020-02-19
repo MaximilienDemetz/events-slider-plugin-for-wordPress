@@ -1,0 +1,153 @@
+/**
+ * #.# Editor Styles
+ *
+ * CSS for just Backend enqueued after style.scss
+ * which makes it higher in priority.
+ */
+
+ /*
+.is-navigate-mode{
+  max-width:90vw !important;
+}
+*/
+.wp-block-cgb-block-weekly-events-display{
+  background: $green;
+  border: 0.2rem solid $black;
+  color: $black;
+  margin: 0 auto;
+  padding: 2rem;  
+}
+
+.fieldListeEvents{
+  padding:5px !important;
+}
+
+.fieldForm{
+  padding:10px 10px 10px 20px !important;
+}
+fieldset p{
+  margin:0 !important;
+}
+
+.listeEvents{
+  max-height: 100px;
+  padding-top:5px !important;
+  margin-top:0;
+  margin-bottom:0 !important;
+  overflow-y:scroll;
+  overflow-x:hidden;
+}
+.listeRecEvents{
+  max-height: 200px;
+  padding-top:5px !important;
+  margin-top:0;
+  margin-bottom:0 !important;
+  overflow-y:scroll;
+  overflow-x:hidden;
+}
+li {
+  display:block;
+  list-style: none;
+  font-size: 1rem;
+  padding-right:1rem;
+  padding-left:20px;
+}
+.titreListeEvents{
+  margin-top: 0.5rem !important;
+  margin-bottom: 0 !important;
+  text-align: center;
+}
+.btnAjouter{
+  border-radius: 5px;
+  color:#21759b;
+  border-color:#21759b;
+  border-width:1px;
+  font-size:1.2rem;
+  background-color:transparent;
+  margin-left:auto !important;
+  margin-right:auto !important;
+  margin-top: 10px !important;
+  padding:5px;
+  display: flex;
+  box-shadow: 3px 3px 10px -2px #888888;
+}
+.btnAjouter:hover{
+  cursor:pointer;
+  font-weight:bold;
+}
+.btnSuppr{
+  color:red;
+  border-radius: 5px;
+  font-size:0.8rem;
+  border-width:1px;
+  border-color:red;
+  box-shadow:none;
+  background-color:transparent;
+  position: relative;
+  display: inline-block;
+  box-shadow: 3px 3px 10px -2px #888888;
+  opacity:1;
+}
+.btnSuppr:hover{
+  cursor: pointer;
+  transform: scale(1.5);
+  font-weight:bold;
+  background-color:white;
+  z-index:6;
+}
+
+.btnModify{
+  color:rgb(0, 162, 255);
+  border-radius: 5px;
+  font-size:0.8rem;
+  border-width:1px;
+  border-color:rgb(0, 162, 255);
+  box-shadow:none;
+  background-color:transparent;
+  position: relative;
+  display: inline-block;
+  box-shadow: 3px 3px 10px -2px #888888;
+  opacity:1;
+}
+.btnModify:hover{
+  cursor: pointer;
+  transform: scale(1.5);
+  font-weight:bold;
+  background-color:white;
+  z-index:6;
+}
+.btnValider{
+  color:limegreen;
+  border-radius: 5px;
+  font-size:0.8rem;
+  border-width:1px;
+  border-color:limegreen;
+  box-shadow:none;
+  background-color:transparent;
+  position: relative;
+  display: inline-block;
+  box-shadow: 3px 3px 10px -2px #888888;
+}
+.btnValider:hover{
+  cursor:pointer;
+  transform: scale(1.5);
+  font-weight:bold;
+  background-color:white;
+  z-index:6;
+}
+
+label{
+  font-weight:normal !important;
+}
+.eventDate{
+  font-weight:bold;
+}
+.spanBold{
+  font-weight:bold;
+}
+.visible{
+  display:inline-block;
+}
+.hidden{
+  display:none;
+}

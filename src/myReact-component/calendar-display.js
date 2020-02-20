@@ -651,37 +651,37 @@ var DailyEvents = function (_React$Component2) {
                 null,
                 React.createElement(
                     "td",
-                    null,
+                    { className: "EventName" },
                     jour1Display
                 ),
                 React.createElement(
                     "td",
-                    null,
+                    { className: "EventName" },
                     jour2Display
                 ),
                 React.createElement(
                     "td",
-                    null,
+                    { className: "EventName" },
                     jour3Display
                 ),
                 React.createElement(
                     "td",
-                    null,
+                    { className: "EventName" },
                     jour4Display
                 ),
                 React.createElement(
                     "td",
-                    null,
+                    { className: "EventName" },
                     jour5Display
                 ),
                 React.createElement(
                     "td",
-                    null,
+                    { className: "EventName" },
                     jour6Display
                 ),
                 React.createElement(
                     "td",
-                    null,
+                    { className: "EventName" },
                     jour7Display
                 )
             );

@@ -486,13 +486,13 @@ class DailyEvents extends React.Component {
         })
         return(
             <tr>
-              <td>{jour1Display}</td>
-              <td>{jour2Display}</td>
-              <td>{jour3Display}</td>
-              <td>{jour4Display}</td>
-              <td>{jour5Display}</td>
-              <td>{jour6Display}</td>
-              <td>{jour7Display}</td>
+              <td className="EventName">{jour1Display}</td>
+              <td className="EventName">{jour2Display}</td>
+              <td className="EventName">{jour3Display}</td>
+              <td className="EventName">{jour4Display}</td>
+              <td className="EventName">{jour5Display}</td>
+              <td className="EventName">{jour6Display}</td>
+              <td className="EventName">{jour7Display}</td>
             </tr>
         )  
     }

@@ -41,6 +41,7 @@ registerBlockType( 'cgb/block-events-slider', {
 			visibility: 'hidden',
 			btnSuppr: {visibility:'visible'},
 			btnModify:{visibility:'visible'},
+			btnAjouter:{visibility:'visible'},
 		};		
 		//méthode pour la supression d'un événement
 		handleDelete = (eventId) => {
@@ -113,13 +114,9 @@ registerBlockType( 'cgb/block-events-slider', {
 			let parent = event.srcElement.parentNode;
 			let hide ={visibility:'hidden'};
 			let show = {visibility:'visible'};
-			this.setState({btnSuppr: hide, btnModify: hide});
-			console.log(this.state.btnSuppr);
-			console.log(this.state.btnModify);
-
+			this.setState({btnSuppr: hide, btnModify: hide, btnAjouter:hide});
 
 			if (eventWithId.eventDate != eventWithId.eventEnd){
-				
 				parent.childNodes[0].innerHTML = '<select name="recurrence" id="modifiedRecurrence"><option value="TLJ">Tous les jours</option><option value="TLJHWE">Tous les jours Hors Week-end</option><option value="WE"> Uniquement les Week-end </option><option value="hebdo">Hebdomadaire (1X par semaine)</option></select>'
 				let recInput = parent.childNodes[0].childNodes[0];
 				recInput.style.width = "auto";
@@ -195,10 +192,9 @@ registerBlockType( 'cgb/block-events-slider', {
 					parent.childNodes[4].innerHTML = replacementEvent.eventEnd.split("-").reverse().join("-");
 					parent.childNodes[6].innerHTML = replacementEvent.eventTime;
 					parent.childNodes[8].innerHTML = replacementEvent.eventName;
-					console.log("replacementEvent.eventName",replacementEvent.eventName);
 					parent.removeChild(parent.childNodes[12]);
 					copieDailyEvents.sort((a,b) => (a.eventDate+a.eventTime > b.eventDate+b.eventTime) ? 1 : -1);
-					this.setState({dailyEvents: copieDailyEvents, btnSuppr:show, btnModify:show});
+					this.setState({dailyEvents: copieDailyEvents, btnSuppr:show, btnModify:show, btnAjouter:show});
 					this.props.setAttributes({dailyEvents: copieDailyEvents});
 				}
 			}else if(eventWithId.eventDate === eventWithId.eventEnd){
@@ -237,10 +233,9 @@ registerBlockType( 'cgb/block-events-slider', {
 					parent.childNodes[1].innerHTML = replacementEvent.eventDate.split("-").reverse().join("-");
 					parent.childNodes[3].innerHTML = replacementEvent.eventTime;
 					parent.childNodes[5].innerHTML = replacementEvent.eventName;
-					console.log("replacementEvent.eventName",replacementEvent.eventName);
 					parent.removeChild(parent.childNodes[9]);
 					copieDailyEvents.sort((a,b) => (a.eventDate+a.eventTime > b.eventDate+b.eventTime) ? 1 : -1);
-					this.setState({dailyEvents: copieDailyEvents, btnSuppr:show, btnModify:show});
+					this.setState({dailyEvents: copieDailyEvents, btnSuppr:show, btnModify:show, btnAjouter:show});
 					this.props.setAttributes({dailyEvents: copieDailyEvents});
 				};
 			}
@@ -280,6 +275,7 @@ registerBlockType( 'cgb/block-events-slider', {
 						uniqueDailyEvents.push(newCopieDailyEvents[i]);
 					}
 				}
+				
 				if (uniqueDailyEvents.length <= 0) {
 					return <li>Il n' y a aucun événement unique pour les mois à venir dans la base de données</li>
 				}else{
@@ -390,9 +386,7 @@ registerBlockType( 'cgb/block-events-slider', {
 					<form id="eventsForm" onSubmit={this.handleSubmit}>
 						<fieldset className="fieldForm">
 							<legend >Ajouter une activité : </legend>
-
 							<div>
-
 								<label for="eventName"> Nom de l'activité : </label>
 								<input type="text" id="eventName" placeholder="Nom de l'activité" />
 								<br></br>
@@ -418,7 +412,7 @@ registerBlockType( 'cgb/block-events-slider', {
 								<label for="eventEndDate" className={this.state.visibility} >Sélectionnez la date de fin de l'activité :</label>
 								<input type="date" id="eventEndDate" className={this.state.visibility} min={this.state.today.format('YYYY-MM-DD')}></input>
 
-								<button className="btnAjouter">Ajouter l'activité</button>
+								<button className={"btnAjouter"+" "+this.state.btnAjouter.visibility}>Ajouter l'activité</button>
 							</div>
 						</fieldset>
 					</form>

@@ -10,6 +10,9 @@
   max-width:90vw !important;
 }
 */
+
+
+
 .wp-block-cgb-block-weekly-events-display{
   background: $green;
   border: 0.2rem solid $black;
@@ -37,21 +40,31 @@ fieldset p{
   overflow-y:scroll;
   overflow-x:hidden;
 }
+.listeEvents li {
+  display:block;
+  list-style: none;
+  font-size: 1.1rem;
+  padding-right:1rem;
+  padding-left:20px;
+}
 .listeRecEvents{
   max-height: 200px;
   padding-top:5px !important;
   margin-top:0;
   margin-bottom:0 !important;
   overflow-y:scroll;
-  overflow-x:hidden;
+  overflow-x:scroll;
 }
-li {
-  display:block;
+
+
+.listeRecEvents li{
+  display:inline-block;
   list-style: none;
-  font-size: 1rem;
+  font-size: 1.1rem;
   padding-right:1rem;
   padding-left:20px;
 }
+
 .titreListeEvents{
   margin-top: 0.5rem !important;
   margin-bottom: 0 !important;
@@ -59,8 +72,8 @@ li {
 }
 .btnAjouter{
   border-radius: 5px;
-  color:#21759b;
-  border-color:#21759b;
+  color:rgb(0, 162, 255);
+  border-color:rgb(0, 162, 255);
   border-width:1px;
   font-size:1.2rem;
   background-color:transparent;
@@ -74,6 +87,9 @@ li {
 .btnAjouter:hover{
   cursor:pointer;
   font-weight:bold;
+  transform: scale(1.2);
+  background-color:white;
+  border-width:1.5px;
 }
 .btnSuppr{
   color:red;
@@ -94,8 +110,8 @@ li {
   font-weight:bold;
   background-color:white;
   z-index:6;
+  position:absolute;
 }
-
 .btnModify{
   color:rgb(0, 162, 255);
   border-radius: 5px;
@@ -146,8 +162,8 @@ label{
   font-weight:bold;
 }
 .visible{
-  display:inline-block;
+  visibility:visible;
 }
 .hidden{
-  display:none;
+  visibility:hidden;
 }

@@ -9,9 +9,12 @@
  *
  * CSS for both Frontend+Backend.
  */
+.wp-block-cgb-block-events-slider {
+  max-width: 90vw !important; }
+
 .wp-block-cgb-block-weekly-events-display {
   color: #292929;
-  margin: 0 auto;
+  margin: 0 auto !important;
   max-width: 80vw !important;
   padding: 2rem; }
 
@@ -47,10 +50,10 @@
   font-weight: bold; }
 
 .monthDisplay {
-  font-size: 2rem;
+  font-size: 1.7rem;
   background-color: rgba(0, 0, 0, 0.63);
   padding-left: 3.5rem;
-  height: 30px; }
+  text-align: center; }
 
 .monthDisplay:hover + .monthNav {
   color: white; }
@@ -65,11 +68,11 @@
   -ms-flex-pack: center;
       justify-content: center;
   color: rgba(0, 0, 0, 0.63);
-  background-color: rgba(0, 0, 0, 0.63);
-  height: 30px; }
+  background-color: rgba(0, 0, 0, 0.63); }
 
 .monthNavBtn {
-  margin: 0; }
+  margin: 0;
+  font-size: 1.7rem !important; }
 
 .monthNav {
   color: transparent; }
@@ -91,7 +94,7 @@
   margin: 0; }
 
 .daysNb {
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: bold;
   text-align: left;
   padding: 0px 10px; }
@@ -111,14 +114,16 @@ tr, th {
 th {
   border: none !important; }
 
+.week-day {
+  font-size: 1.5rem; }
+
 td {
-  font-size: 0.8rem;
   border: none !important;
   font-weight: bold;
   width: 100%;
   padding-top: 0px !important; }
 
-li {
+.EventName li {
   list-style: none;
   margin: 0 !important;
   display: -ms-flexbox;
@@ -130,7 +135,8 @@ li {
   -ms-flex-align: start;
       align-items: flex-start;
   -ms-flex-pack: start;
-      justify-content: flex-start; }
+      justify-content: flex-start;
+  font-size: 1.5rem !important; }
 
 .hidden {
   display: none; }
